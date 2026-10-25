@@ -42,3 +42,11 @@ Temuan yang benar-benar terlihat: website informasi memiliki lima tautan navigas
 ## Keputusan aset
 
 Tidak mengambil foto pihak ketiga atau membuat gambar AI artefak. Placeholder garis kontur adalah grafis dekoratif CSS berlabel foto belum tersedia, bukan foto atau rekonstruksi Gunung Kawi. Tidak ada panorama engine. Folder aset siap diisi dan manifest mengontrol aktivasi foto nyata. Tur belum memiliki URL produksi.
+
+## Keputusan revamp terbaru
+
+Pengguna meminta desain/layout/font/copywriting/animasi mengikuti referensi Pura Pengukur-Ukuran, kemudian memilih foto asli Gunung Kawi berlisensi terbuka sementara. Keputusan ini menggantikan pendekatan visual ivory/forest/serif dan placeholder-only pada implementasi awal.
+
+Audit ulang Edge meliputi `/`, `/history`, `/location`, `/information`, dan `/virtual-tour` pada desktop/mobile. Font aktual Geist; heading beranda `36px`, halaman dalam `48px` desktop dan `36px` mobile. Tampilan memakai latar foto dengan overlay gelap, teks putih/emas, dan panel transparan berbatas terang. Bukti: `reference-audit/revamp/`. Keterbatasan audit awal pada bagian sebelumnya merupakan riwayat.
+
+Foto sementara berasal dari Wikimedia Commons, bukan situs pura referensi. Sumber, pencipta, lisensi, dan optimasi dicatat di `01-gunung-kawi-web/public/images/reference/attribution.json`. Tiga foto candi memakai CC BY 3.0; foto sawah public domain. Kredit lengkap ada di halaman Informasi. Foto saluran air tidak dilabeli Sungai Pakerisan; slot sungai, pertapaan, denah resmi, dan panorama tetap kosong jika subjek belum tersedia.

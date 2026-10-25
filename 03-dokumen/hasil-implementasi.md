@@ -2,6 +2,8 @@
 
 Tanggal: 25 Oktober 2026, Asia/Makassar. Implementasi dilakukan langsung pada folder proyek lokal. Website informasi sudah dapat dibangun dan dijalankan. Produksi tur 3DVista menunggu aset asli dan pekerjaan manual.
 
+**Pembaruan revamp:** lima halaman ID/EN kini mengikuti arah visual referensi Pura Pengukur-Ukuran atas instruksi terbaru pengguna: Geist, latar foto gelap, judul putih/emas dan panel transparan. Empat foto asli Gunung Kawi berlisensi terbuka dipakai sementara sesuai pilihan pengguna dan disertai kredit. Screenshot terbaru: `preview/revamp/`. Lint, typecheck, build, `6` tes logika/render, `12` tes browser utama, dan `2` tes browser URL terisi kembali lulus. Penjelasan desain/foto awal di bawah merupakan riwayat sebelum revamp; state terkini mengikuti state utama workspace.
+
 ## 1. Versi teknologi aktual
 
 | Teknologi | Versi |

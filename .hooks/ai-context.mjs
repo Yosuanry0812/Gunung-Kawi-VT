@@ -86,7 +86,7 @@ export function hookResult(event, cwd = projectRoot) {
   if (relative === '..' || relative.startsWith(`..${path.sep}`) || path.isAbsolute(relative)) return null;
   if (event.hook_event_name === 'SessionStart') {
     return { hookSpecificOutput: { hookEventName: 'SessionStart', additionalContext:
-      'Proyek Gunung Kawi VT (Next.js). Baca AGENTS.md di folder induk proyek dan satu state: ../../doc/state/joki/Gunung Kawi VT.md. Gunakan graphify query "<topik>" --budget 800 dari folder proyek sebelum source. Akhiri perubahan dengan memperbarui state dan npm run ai:finish. Jangan memindai workspace, dependency, build, atau media besar.' } };
+      `Root proyek: ${projectRoot}. Next.js. Relatif root ini, baca AGENTS.md dan satu state: ../../doc/state/joki/Gunung Kawi VT.md. Gunakan graphify query "<topik>" --budget 800 dari root proyek sebelum source. Akhiri perubahan dengan memperbarui state dan npm run ai:finish. Jangan memindai workspace, dependency, build, atau media besar.` } };
   }
   if (event.hook_event_name === 'Stop' && !event.stop_hook_active) {
     const reason = pending();

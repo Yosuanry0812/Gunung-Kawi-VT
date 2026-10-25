@@ -6,5 +6,5 @@ Baca satu state tersebut untuk progres, hasil uji, batasan, dan next step. Berka
 - Website Next.js: `../01-gunung-kawi-web/`.
 - Proposal asli: `proposal/`; foto: `../01-gunung-kawi-web/public/images/`.
 - Panorama/proyek/ekspor: `../02-gunung-kawi-3dvista/`.
-- Proposal, foto, dan tur asli masih menunggu pengguna; scene P01–P09 masih `planned`.
+- Proposal, foto dokumentasi proyek, dan tur asli masih menunggu pengguna; scene P01–P09 masih `planned`. Foto berlisensi terbuka sementara tersedia dengan kredit pada halaman Informasi.
 - Aturan AI dan pencarian kode: [AGENTS.md](../AGENTS.md).

@@ -6,6 +6,8 @@ Letakkan proposal asli di `03-dokumen/proposal/`. Simpan dokumen sumber apa adan
 
 ## Foto website
 
+Desain revamp memakai empat foto asli berlisensi terbuka di `public/images/reference/`, sesuai pilihan pengguna. Foto tersebut aktif pada beberapa key manifest dan memiliki kredit tersendiri. Untuk menggantinya dengan dokumentasi proyek, ubah `src` dari `/images/reference/...` menjadi path foto Anda pada tabel berikut; key yang belum memiliki subjek sesuai tetap `null`.
+
 Semua path di bawah relatif terhadap `01-gunung-kawi-web/public/`.
 
 | Key manifest | Lokasi file yang disiapkan | Kegunaan |
@@ -23,7 +25,7 @@ Semua path di bawah relatif terhadap `01-gunung-kawi-web/public/`.
 
 1. Masukkan foto asli sesuai nama file. Gunakan file JPG/WebP; jika ekstensi berbeda, sesuaikan manifest.
 2. Buka `01-gunung-kawi-web/src/content/media.ts`.
-3. Ganti `src: null` pada key yang sesuai dengan path publiknya. Contoh:
+3. Ganti nilai `src` pada key yang sesuai (baik path foto sementara maupun `null`) dengan path publik foto Anda. Contoh:
 
 ```ts
 hero: { src: "/images/home/hero-gunung-kawi.jpg", path: "/images/home/hero-gunung-kawi.jpg", id: "GK—01" },

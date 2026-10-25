@@ -45,7 +45,7 @@ Buka `http://localhost:3000`; root mengalihkan ke `/id`. `.env.local` bersifat o
 3. Simpan foto panorama asli ke `02-gunung-kawi-3dvista/raw-panorama/`, bukan ke aplikasi web.
 4. Setelah tur diterbitkan, isi `NEXT_PUBLIC_VIRTUAL_TOUR_URL` di `.env.local`, lalu build ulang.
 
-Foto dan proposal belum tersedia. Seluruh sembilan scene masih `planned`; tur 3DVista belum dibuat. Lihat [status proyek](03-dokumen/project-state.md) sebelum melanjutkan pengembangan.
+Proposal dan foto dokumentasi proyek belum tersedia. Website memakai empat foto asli Gunung Kawi berlisensi terbuka sementara, sesuai pilihan pengguna; kredit tersedia di halaman Informasi. Seluruh sembilan scene masih `planned`; tur 3DVista belum dibuat. Lihat [status proyek](03-dokumen/project-state.md) sebelum melanjutkan pengembangan.
 
 ## Sesi AI hemat konteks
 

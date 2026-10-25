@@ -1,6 +1,8 @@
 # Gunung Kawi — Website Informasi
 
-Next.js App Router, React, TypeScript strict, Tailwind CSS v4 melalui `@tailwindcss/postcss`, Motion, Lucide React, Cormorant Garamond dan Plus Jakarta Sans dari `next/font/google`. Versi persis dikunci di `package-lock.json`. Node.js 24 LTS, npm.
+Next.js App Router, React, TypeScript strict, Tailwind CSS v4 melalui `@tailwindcss/postcss`, Motion, Lucide React, dan Geist dari `next/font/google`. Versi persis dikunci di `package-lock.json`. Node.js 24 LTS, npm.
+
+Desain mengikuti arah referensi Pura Pengukur-Ukuran: latar foto gelap, header transparan, judul putih/emas, hero dua kolom, dan panel konten transparan. Empat foto asli berlisensi terbuka di `public/images/reference/` dipakai sementara atas pilihan pengguna; metadata lisensi ada di `attribution.json` dan kredit lengkap tampil pada halaman Informasi. Foto sendiri dapat menggantikan nilai `src` pada manifest.
 
 ## Perintah
 
@@ -23,6 +25,15 @@ npm run test:tour-url
 ```
 
 E2E memakai Microsoft Edge terpasang, menjalankan `next start` otomatis pada port 3000. Tutup server development pada port tersebut sebelum E2E agar yang diuji adalah build produksi. Untuk OS lain, ganti `channel: "msedge"` di `playwright.config.ts` sesuai browser terpasang. Laporan HTML: `npx playwright show-report`. Build memerlukan akses ke Google Fonts untuk `next/font/google`.
+
+Jika development masih berjalan pada port 3000, gunakan port produksi terpisah untuk pengujian:
+
+```powershell
+$env:PLAYWRIGHT_PORT = '3100'
+npm run test:e2e
+```
+
+Variabel yang sama diteruskan oleh `npm run test:tour-url`.
 
 `test:tour-url` membuat build sementara dengan URL fixture HTTPS, menguji pembukaan tab baru dalam dua bahasa, lalu membangun ulang tanpa URL tur. Domain fixture dicegat Playwright dan tidak digunakan sebagai panorama produksi. Jalankan sebelum mengisi `.env.local` dengan URL tur nyata; jangan menjalankan dua server/build bersamaan.
 
