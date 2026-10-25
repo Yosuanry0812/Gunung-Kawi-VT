@@ -1,0 +1,142 @@
+{
+  "status": "planned",
+  "surveyed": false,
+  "note": "Final locations depend on field survey and permissions.",
+  "scenes": [
+    {
+      "sceneId": "P01",
+      "nameId": "Gerbang Masuk",
+      "nameEn": "Entrance Gate",
+      "category": "access",
+      "assetStatus": "planned",
+      "description": {
+        "id": "Rencana dokumentasi gerbang masuk; titik kamera ditentukan setelah survei.",
+        "en": "Planned documentation of entrance gate; camera position subject to field survey."
+      },
+      "permissionNotes": "Obtain management permission; confirm access and photography restrictions before capture.",
+      "hotspotPlan": "Link only to surveyed adjacent scenes; add verified object information.",
+      "narrationPlan": "Prepare Indonesian and English narration after academic review.",
+      "quizPlan": "Review relevant educational questions after content approval."
+    },
+    {
+      "sceneId": "P02",
+      "nameId": "Anak Tangga",
+      "nameEn": "Steps",
+      "category": "access",
+      "assetStatus": "planned",
+      "description": {
+        "id": "Rencana dokumentasi anak tangga; titik kamera ditentukan setelah survei.",
+        "en": "Planned documentation of steps; camera position subject to field survey."
+      },
+      "permissionNotes": "Obtain management permission; confirm access and photography restrictions before capture.",
+      "hotspotPlan": "Link only to surveyed adjacent scenes; add verified object information.",
+      "narrationPlan": "Prepare Indonesian and English narration after academic review.",
+      "quizPlan": "Review relevant educational questions after content approval."
+    },
+    {
+      "sceneId": "P03",
+      "nameId": "Sungai Pakerisan",
+      "nameEn": "Pakerisan River",
+      "category": "landscape",
+      "assetStatus": "planned",
+      "description": {
+        "id": "Rencana dokumentasi sungai pakerisan; titik kamera ditentukan setelah survei.",
+        "en": "Planned documentation of pakerisan river; camera position subject to field survey."
+      },
+      "permissionNotes": "Obtain management permission; confirm access and photography restrictions before capture.",
+      "hotspotPlan": "Link only to surveyed adjacent scenes; add verified object information.",
+      "narrationPlan": "Prepare Indonesian and English narration after academic review.",
+      "quizPlan": "Review relevant educational questions after content approval."
+    },
+    {
+      "sceneId": "P04",
+      "nameId": "Kompleks Candi Barat",
+      "nameEn": "Western Shrines",
+      "category": "heritage",
+      "assetStatus": "planned",
+      "description": {
+        "id": "Rencana dokumentasi kompleks candi barat; titik kamera ditentukan setelah survei.",
+        "en": "Planned documentation of western shrines; camera position subject to field survey."
+      },
+      "permissionNotes": "Obtain management permission; confirm access and photography restrictions before capture.",
+      "hotspotPlan": "Link only to surveyed adjacent scenes; add verified object information.",
+      "narrationPlan": "Prepare Indonesian and English narration after academic review.",
+      "quizPlan": "Review relevant educational questions after content approval."
+    },
+    {
+      "sceneId": "P05",
+      "nameId": "Kompleks Candi Timur",
+      "nameEn": "Eastern Shrines",
+      "category": "heritage",
+      "assetStatus": "planned",
+      "description": {
+        "id": "Rencana dokumentasi kompleks candi timur; titik kamera ditentukan setelah survei.",
+        "en": "Planned documentation of eastern shrines; camera position subject to field survey."
+      },
+      "permissionNotes": "Obtain management permission; confirm access and photography restrictions before capture.",
+      "hotspotPlan": "Link only to surveyed adjacent scenes; add verified object information.",
+      "narrationPlan": "Prepare Indonesian and English narration after academic review.",
+      "quizPlan": "Review relevant educational questions after content approval."
+    },
+    {
+      "sceneId": "P06",
+      "nameId": "Wihara / Pertapaan",
+      "nameEn": "Hermitage",
+      "category": "heritage",
+      "assetStatus": "planned",
+      "description": {
+        "id": "Rencana dokumentasi wihara / pertapaan; titik kamera ditentukan setelah survei.",
+        "en": "Planned documentation of hermitage; camera position subject to field survey."
+      },
+      "permissionNotes": "Obtain management permission; confirm access and photography restrictions before capture.",
+      "hotspotPlan": "Link only to surveyed adjacent scenes; add verified object information.",
+      "narrationPlan": "Prepare Indonesian and English narration after academic review.",
+      "quizPlan": "Review relevant educational questions after content approval."
+    },
+    {
+      "sceneId": "P07",
+      "nameId": "Pancuran Air",
+      "nameEn": "Water Spout",
+      "category": "landscape",
+      "assetStatus": "planned",
+      "description": {
+        "id": "Rencana dokumentasi pancuran air; titik kamera ditentukan setelah survei.",
+        "en": "Planned documentation of water spout; camera position subject to field survey."
+      },
+      "permissionNotes": "Obtain management permission; confirm access and photography restrictions before capture.",
+      "hotspotPlan": "Link only to surveyed adjacent scenes; add verified object information.",
+      "narrationPlan": "Prepare Indonesian and English narration after academic review.",
+      "quizPlan": "Review relevant educational questions after content approval."
+    },
+    {
+      "sceneId": "P08",
+      "nameId": "Area Persawahan",
+      "nameEn": "Rice Fields",
+      "category": "landscape",
+      "assetStatus": "planned",
+      "description": {
+        "id": "Rencana dokumentasi area persawahan; titik kamera ditentukan setelah survei.",
+        "en": "Planned documentation of rice fields; camera position subject to field survey."
+      },
+      "permissionNotes": "Obtain management permission; confirm access and photography restrictions before capture.",
+      "hotspotPlan": "Link only to surveyed adjacent scenes; add verified object information.",
+      "narrationPlan": "Prepare Indonesian and English narration after academic review.",
+      "quizPlan": "Review relevant educational questions after content approval."
+    },
+    {
+      "sceneId": "P09",
+      "nameId": "Tempat Persembahyangan",
+      "nameEn": "Worship Area",
+      "category": "sacred",
+      "assetStatus": "planned",
+      "description": {
+        "id": "Rencana dokumentasi tempat persembahyangan; titik kamera ditentukan setelah survei.",
+        "en": "Planned documentation of worship area; camera position subject to field survey."
+      },
+      "permissionNotes": "Obtain management permission; confirm access and photography restrictions before capture.",
+      "hotspotPlan": "Link only to surveyed adjacent scenes; add verified object information.",
+      "narrationPlan": "Prepare Indonesian and English narration after academic review.",
+      "quizPlan": "Review relevant educational questions after content approval."
+    }
+  ]
+}

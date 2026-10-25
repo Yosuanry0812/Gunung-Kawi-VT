@@ -1,0 +1,4 @@
+# Only the dependency-free launcher belongs to this workspace.
+packages: []
+# Website dependencies are installed with npm using its existing lockfile.
+verifyDepsBeforeRun: false

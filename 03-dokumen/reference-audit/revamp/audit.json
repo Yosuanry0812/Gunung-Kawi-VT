@@ -1,0 +1,988 @@
+[
+  {
+    "name": "home",
+    "device": "desktop",
+    "status": 200,
+    "title": "Pura Heritage Site",
+    "height": 1000,
+    "bodyFont": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+    "bodyBackground": "oklch(1 0 0)",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Pura Dang Khayangan",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 208,
+        "height": 28
+      },
+      {
+        "tag": "H2",
+        "text": "Selamat Datang di Warisan Suci Pura Dhangkayangan Cagar Budaya Pengukur-Ukuran",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "36px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 592,
+        "height": 135
+      }
+    ],
+    "navigation": [
+      {
+        "text": "Beranda",
+        "href": "/"
+      },
+      {
+        "text": "Sejarah",
+        "href": "/history"
+      },
+      {
+        "text": "Lokasi",
+        "href": "/location"
+      },
+      {
+        "text": "Informasi",
+        "href": "/information"
+      },
+      {
+        "text": "Virtual Tour",
+        "href": "/virtual-tour"
+      }
+    ],
+    "buttons": [
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 0,
+        "height": 0
+      }
+    ],
+    "images": [
+      {
+        "alt": "Pura Dang Khayangan Cagar Budaya Pengukur-ukuran",
+        "loaded": false
+      },
+      {
+        "alt": "Pura Dang Khayangan Cagar Budaya Pengukur-ukuran",
+        "loaded": true
+      }
+    ],
+    "animations": []
+  },
+  {
+    "name": "home",
+    "device": "mobile",
+    "status": 200,
+    "title": "Pura Heritage Site",
+    "height": 921,
+    "bodyFont": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+    "bodyBackground": "rgba(0, 0, 0, 0)",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Pura Dang Khayangan",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 208,
+        "height": 28
+      },
+      {
+        "tag": "H2",
+        "text": "Selamat Datang di Warisan Suci Pura Dhangkayangan Cagar Budaya Pengukur-Ukuran",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "36px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 342,
+        "height": 225
+      }
+    ],
+    "navigation": [
+      {
+        "text": "Beranda",
+        "href": "/"
+      },
+      {
+        "text": "Sejarah",
+        "href": "/history"
+      },
+      {
+        "text": "Lokasi",
+        "href": "/location"
+      },
+      {
+        "text": "Informasi",
+        "href": "/information"
+      },
+      {
+        "text": "Virtual Tour",
+        "href": "/virtual-tour"
+      }
+    ],
+    "buttons": [
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 24,
+        "height": 24
+      }
+    ],
+    "images": [
+      {
+        "alt": "Pura Dang Khayangan Cagar Budaya Pengukur-ukuran",
+        "loaded": true
+      },
+      {
+        "alt": "Pura Dang Khayangan Cagar Budaya Pengukur-ukuran",
+        "loaded": true
+      }
+    ],
+    "animations": []
+  },
+  {
+    "name": "history",
+    "device": "desktop",
+    "status": 200,
+    "title": "Sejarah | Pura Heritage Site",
+    "height": 1168,
+    "bodyFont": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+    "bodyBackground": "oklch(1 0 0)",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Pura Dang Khayangan",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 208,
+        "height": 28
+      },
+      {
+        "tag": "H1",
+        "text": "Sejarah Pura Dang Khayangan",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "48px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 1232,
+        "height": 48
+      },
+      {
+        "tag": "H2",
+        "text": "Asal Usul Kuno",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "30px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 665,
+        "height": 36
+      }
+    ],
+    "navigation": [
+      {
+        "text": "Beranda",
+        "href": "/"
+      },
+      {
+        "text": "Sejarah",
+        "href": "/history"
+      },
+      {
+        "text": "Lokasi",
+        "href": "/location"
+      },
+      {
+        "text": "Informasi",
+        "href": "/information"
+      },
+      {
+        "text": "Virtual Tour",
+        "href": "/virtual-tour"
+      }
+    ],
+    "buttons": [
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 0,
+        "height": 0
+      }
+    ],
+    "images": [
+      {
+        "alt": "Pura Dang Khayangan Cagar Budaya Pengukur-ukuran",
+        "loaded": true
+      },
+      {
+        "alt": "Ukiran pura kuno dan artefak bersejarah",
+        "loaded": true
+      },
+      {
+        "alt": "Ukiran pura kuno dan artefak bersejarah",
+        "loaded": true
+      }
+    ],
+    "animations": []
+  },
+  {
+    "name": "history",
+    "device": "mobile",
+    "status": 200,
+    "title": "Sejarah | Pura Heritage Site",
+    "height": 2456,
+    "bodyFont": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+    "bodyBackground": "oklch(1 0 0)",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Pura Dang Khayangan",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 208,
+        "height": 28
+      },
+      {
+        "tag": "H1",
+        "text": "Sejarah Pura Dang Khayangan",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "36px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 342,
+        "height": 80
+      },
+      {
+        "tag": "H2",
+        "text": "Asal Usul Kuno",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "30px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 308,
+        "height": 36
+      }
+    ],
+    "navigation": [
+      {
+        "text": "Beranda",
+        "href": "/"
+      },
+      {
+        "text": "Sejarah",
+        "href": "/history"
+      },
+      {
+        "text": "Lokasi",
+        "href": "/location"
+      },
+      {
+        "text": "Informasi",
+        "href": "/information"
+      },
+      {
+        "text": "Virtual Tour",
+        "href": "/virtual-tour"
+      }
+    ],
+    "buttons": [
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 24,
+        "height": 24
+      }
+    ],
+    "images": [
+      {
+        "alt": "Pura Dang Khayangan Cagar Budaya Pengukur-ukuran",
+        "loaded": true
+      },
+      {
+        "alt": "Ukiran pura kuno dan artefak bersejarah",
+        "loaded": true
+      },
+      {
+        "alt": "Ukiran pura kuno dan artefak bersejarah",
+        "loaded": true
+      }
+    ],
+    "animations": []
+  },
+  {
+    "name": "location",
+    "device": "desktop",
+    "status": 200,
+    "title": "Lokasi | Pura Heritage Site",
+    "height": 1504,
+    "bodyFont": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+    "bodyBackground": "oklch(1 0 0)",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Pura Dang Khayangan",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 208,
+        "height": 28
+      },
+      {
+        "tag": "H1",
+        "text": "Lokasi Pura Dang Khayangan",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "48px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 1232,
+        "height": 48
+      },
+      {
+        "tag": "H2",
+        "text": "Posisi Geografis",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "24px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 567,
+        "height": 32
+      },
+      {
+        "tag": "H2",
+        "text": "Peta Interaktif",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "24px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 1166,
+        "height": 32
+      }
+    ],
+    "navigation": [
+      {
+        "text": "Beranda",
+        "href": "/"
+      },
+      {
+        "text": "Sejarah",
+        "href": "/history"
+      },
+      {
+        "text": "Lokasi",
+        "href": "/location"
+      },
+      {
+        "text": "Informasi",
+        "href": "/information"
+      },
+      {
+        "text": "Virtual Tour",
+        "href": "/virtual-tour"
+      }
+    ],
+    "buttons": [
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 0,
+        "height": 0
+      }
+    ],
+    "images": [
+      {
+        "alt": "Pura Dang Khayangan Cagar Budaya Pengukur-ukuran",
+        "loaded": true
+      },
+      {
+        "alt": "Pemandangan udara lokasi pura menunjukkan lanskap sekitarnya",
+        "loaded": true
+      }
+    ],
+    "animations": []
+  },
+  {
+    "name": "location",
+    "device": "mobile",
+    "status": 200,
+    "title": "Lokasi | Pura Heritage Site",
+    "height": 2142,
+    "bodyFont": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+    "bodyBackground": "oklch(1 0 0)",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Pura Dang Khayangan",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 208,
+        "height": 28
+      },
+      {
+        "tag": "H1",
+        "text": "Lokasi Pura Dang Khayangan",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "36px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 342,
+        "height": 80
+      },
+      {
+        "tag": "H2",
+        "text": "Posisi Geografis",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "24px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 276,
+        "height": 32
+      },
+      {
+        "tag": "H2",
+        "text": "Peta Interaktif",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "24px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 276,
+        "height": 32
+      }
+    ],
+    "navigation": [
+      {
+        "text": "Beranda",
+        "href": "/"
+      },
+      {
+        "text": "Sejarah",
+        "href": "/history"
+      },
+      {
+        "text": "Lokasi",
+        "href": "/location"
+      },
+      {
+        "text": "Informasi",
+        "href": "/information"
+      },
+      {
+        "text": "Virtual Tour",
+        "href": "/virtual-tour"
+      }
+    ],
+    "buttons": [
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 24,
+        "height": 24
+      }
+    ],
+    "images": [
+      {
+        "alt": "Pura Dang Khayangan Cagar Budaya Pengukur-ukuran",
+        "loaded": true
+      },
+      {
+        "alt": "Pemandangan udara lokasi pura menunjukkan lanskap sekitarnya",
+        "loaded": true
+      }
+    ],
+    "animations": []
+  },
+  {
+    "name": "information",
+    "device": "desktop",
+    "status": 200,
+    "title": "Informasi | Pura Heritage Site",
+    "height": 1423,
+    "bodyFont": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+    "bodyBackground": "oklch(1 0 0)",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Pura Dang Khayangan",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 208,
+        "height": 28
+      },
+      {
+        "tag": "H1",
+        "text": "Informasi Pengunjung",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "48px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 1248,
+        "height": 48
+      }
+    ],
+    "navigation": [
+      {
+        "text": "Beranda",
+        "href": "/"
+      },
+      {
+        "text": "Sejarah",
+        "href": "/history"
+      },
+      {
+        "text": "Lokasi",
+        "href": "/location"
+      },
+      {
+        "text": "Informasi",
+        "href": "/information"
+      },
+      {
+        "text": "Virtual Tour",
+        "href": "/virtual-tour"
+      }
+    ],
+    "buttons": [
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 0,
+        "height": 0
+      }
+    ],
+    "images": [
+      {
+        "alt": "Pura Dang Khayangan Cagar Budaya Pengukur-ukuran",
+        "loaded": true
+      },
+      {
+        "alt": "Larangan menstruasi",
+        "loaded": true
+      },
+      {
+        "alt": "Menjaga sikap",
+        "loaded": true
+      },
+      {
+        "alt": "Pakaian sopan",
+        "loaded": true
+      }
+    ],
+    "animations": []
+  },
+  {
+    "name": "information",
+    "device": "mobile",
+    "status": 200,
+    "title": "Informasi | Pura Heritage Site",
+    "height": 2776,
+    "bodyFont": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+    "bodyBackground": "oklch(1 0 0)",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Pura Dang Khayangan",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 208,
+        "height": 28
+      },
+      {
+        "tag": "H1",
+        "text": "Informasi Pengunjung",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "36px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 358,
+        "height": 80
+      }
+    ],
+    "navigation": [
+      {
+        "text": "Beranda",
+        "href": "/"
+      },
+      {
+        "text": "Sejarah",
+        "href": "/history"
+      },
+      {
+        "text": "Lokasi",
+        "href": "/location"
+      },
+      {
+        "text": "Informasi",
+        "href": "/information"
+      },
+      {
+        "text": "Virtual Tour",
+        "href": "/virtual-tour"
+      }
+    ],
+    "buttons": [
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 24,
+        "height": 24
+      }
+    ],
+    "images": [
+      {
+        "alt": "Pura Dang Khayangan Cagar Budaya Pengukur-ukuran",
+        "loaded": true
+      },
+      {
+        "alt": "Larangan menstruasi",
+        "loaded": true
+      },
+      {
+        "alt": "Menjaga sikap",
+        "loaded": true
+      },
+      {
+        "alt": "Pakaian sopan",
+        "loaded": true
+      }
+    ],
+    "animations": []
+  },
+  {
+    "name": "tour",
+    "device": "desktop",
+    "status": 200,
+    "title": "Pura Heritage Site",
+    "height": 1139,
+    "bodyFont": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+    "bodyBackground": "oklch(1 0 0)",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Pura Dang Khayangan",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 208,
+        "height": 28
+      },
+      {
+        "tag": "H1",
+        "text": "Virtual Tour Pura",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "48px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 1248,
+        "height": 48
+      }
+    ],
+    "navigation": [
+      {
+        "text": "Beranda",
+        "href": "/"
+      },
+      {
+        "text": "Sejarah",
+        "href": "/history"
+      },
+      {
+        "text": "Lokasi",
+        "href": "/location"
+      },
+      {
+        "text": "Informasi",
+        "href": "/information"
+      },
+      {
+        "text": "Virtual Tour",
+        "href": "/virtual-tour"
+      }
+    ],
+    "buttons": [
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 0,
+        "height": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Mulai Tur Virtual 360°",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(255, 255, 255)",
+        "background": "oklch(0.681 0.162 75.834)",
+        "radius": "4px",
+        "position": "static",
+        "width": 195,
+        "height": 40
+      }
+    ],
+    "images": [
+      {
+        "alt": "Pura Dang Khayangan Cagar Budaya Pengukur-ukuran",
+        "loaded": true
+      },
+      {
+        "alt": "Pemandangan udara lokasi pura menunjukkan lanskap sekitarnya",
+        "loaded": true
+      },
+      {
+        "alt": "Pemandangan udara lokasi pura menunjukkan lanskap sekitarnya",
+        "loaded": true
+      }
+    ],
+    "animations": []
+  },
+  {
+    "name": "tour",
+    "device": "mobile",
+    "status": 200,
+    "title": "Pura Heritage Site",
+    "height": 1604,
+    "bodyFont": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+    "bodyBackground": "oklch(1 0 0)",
+    "headings": [
+      {
+        "tag": "H1",
+        "text": "Pura Dang Khayangan",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "18px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 208,
+        "height": 28
+      },
+      {
+        "tag": "H1",
+        "text": "Virtual Tour Pura",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "36px",
+        "weight": "700",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 358,
+        "height": 40
+      }
+    ],
+    "navigation": [
+      {
+        "text": "Beranda",
+        "href": "/"
+      },
+      {
+        "text": "Sejarah",
+        "href": "/history"
+      },
+      {
+        "text": "Lokasi",
+        "href": "/location"
+      },
+      {
+        "text": "Informasi",
+        "href": "/information"
+      },
+      {
+        "text": "Virtual Tour",
+        "href": "/virtual-tour"
+      }
+    ],
+    "buttons": [
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(255, 255, 255)",
+        "background": "rgba(0, 0, 0, 0)",
+        "radius": "0px",
+        "position": "static",
+        "width": 24,
+        "height": 24
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Mulai Tur Virtual 360°",
+        "font": "__GeistSans_fb8f2c, __GeistSans_Fallback_fb8f2c",
+        "size": "16px",
+        "weight": "400",
+        "color": "rgb(255, 255, 255)",
+        "background": "oklch(0.681 0.162 75.834)",
+        "radius": "4px",
+        "position": "static",
+        "width": 195,
+        "height": 40
+      }
+    ],
+    "images": [
+      {
+        "alt": "Pura Dang Khayangan Cagar Budaya Pengukur-ukuran",
+        "loaded": true
+      },
+      {
+        "alt": "Pemandangan udara lokasi pura menunjukkan lanskap sekitarnya",
+        "loaded": true
+      },
+      {
+        "alt": "Pemandangan udara lokasi pura menunjukkan lanskap sekitarnya",
+        "loaded": true
+      }
+    ],
+    "animations": []
+  }
+]

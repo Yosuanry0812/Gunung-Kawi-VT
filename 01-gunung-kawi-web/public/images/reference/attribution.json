@@ -1,0 +1,98 @@
+[
+  {
+    "id": "gunung-kawi-01",
+    "file": "gunung-kawi-01.webp",
+    "publicPath": "/images/reference/gunung-kawi-01.webp",
+    "sourceTitle": "File:Gunung Kawi Temple in Tampaksiring - Bali.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Gunung_Kawi_Temple_in_Tampaksiring_-_Bali.jpg",
+    "sourceOriginal": "https://upload.wikimedia.org/wikipedia/commons/3/38/Gunung_Kawi_Temple_in_Tampaksiring_-_Bali.jpg",
+    "author": "www.Pinterpandai.com",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "changes": "Resized to fit within 1920 ? 1920 pixels, EXIF orientation applied, converted from JPEG to WebP (quality 82); no content alteration.",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 764150,
+    "subject": "Rock-cut shrines at Gunung Kawi Tampaksiring, with four carved monuments in the cliff.",
+    "projectDocumentation": false,
+    "temporaryReference": true,
+    "accessed": "2026-10-25",
+    "alt": {
+      "id": "Candi tebing Gunung Kawi Tampaksiring dengan deretan empat bangunan pahatan pada dinding cadas.",
+      "en": "Rock-cut shrines at Gunung Kawi Tampaksiring, with four carved monuments in the cliff."
+    },
+    "visuallyVerified": true
+  },
+  {
+    "id": "gunung-kawi-02",
+    "file": "gunung-kawi-02.webp",
+    "publicPath": "/images/reference/gunung-kawi-02.webp",
+    "sourceTitle": "File:Gunung Kawi Temple, a Spiritual Haven in Bali.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Gunung_Kawi_Temple,_a_Spiritual_Haven_in_Bali.jpg",
+    "sourceOriginal": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Gunung_Kawi_Temple%2C_a_Spiritual_Haven_in_Bali.jpg",
+    "author": "Pinterpandai.com",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "changes": "Resized to fit within 1920 ? 1920 pixels, EXIF orientation applied, converted from JPEG to WebP (quality 82); no content alteration.",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 580122,
+    "subject": "Rock-cut shrine complex, water channel, and visitor path at Gunung Kawi Tampaksiring.",
+    "projectDocumentation": false,
+    "temporaryReference": true,
+    "accessed": "2026-10-25",
+    "alt": {
+      "id": "Kompleks candi tebing Gunung Kawi Tampaksiring, saluran air, dan jalur pengunjung.",
+      "en": "Rock-cut shrine complex, water channel, and visitor path at Gunung Kawi Tampaksiring."
+    },
+    "visuallyVerified": true
+  },
+  {
+    "id": "gunung-kawi-03",
+    "file": "gunung-kawi-03.webp",
+    "publicPath": "/images/reference/gunung-kawi-03.webp",
+    "sourceTitle": "File:Gunung Kawi Temple in Bali.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Gunung_Kawi_Temple_in_Bali.jpg",
+    "sourceOriginal": "https://upload.wikimedia.org/wikipedia/commons/5/52/Gunung_Kawi_Temple_in_Bali.jpg",
+    "author": "www.Pinterpandai.com",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "changes": "Resized to fit within 1920 ? 1920 pixels, EXIF orientation applied, converted from JPEG to WebP (quality 82); no content alteration.",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 624084,
+    "subject": "Five rock-cut shrines at Gunung Kawi Tampaksiring, with water spouts in the foreground.",
+    "projectDocumentation": false,
+    "temporaryReference": true,
+    "accessed": "2026-10-25",
+    "alt": {
+      "id": "Deretan lima candi tebing Gunung Kawi Tampaksiring dengan pancuran air di depannya.",
+      "en": "Five rock-cut shrines at Gunung Kawi Tampaksiring, with water spouts in the foreground."
+    },
+    "visuallyVerified": true
+  },
+  {
+    "id": "gunung-kawi-rice-fields",
+    "file": "gunung-kawi-rice-fields.webp",
+    "publicPath": "/images/reference/gunung-kawi-rice-fields.webp",
+    "sourceTitle": "File:Gunung Kawi Rice Terrace Tampaksiring 1.jpg",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Gunung_Kawi_Rice_Terrace_Tampaksiring_1.jpg",
+    "sourceOriginal": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Gunung_Kawi_Rice_Terrace_Tampaksiring_1.jpg",
+    "author": "User:Davenbelle aka User:Moby Dick aka Jack Merridew",
+    "license": "Public domain",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/File:Gunung_Kawi_Rice_Terrace_Tampaksiring_1.jpg#Summary",
+    "changes": "Resized to fit within 1920 ? 1920 pixels, EXIF orientation applied, converted from JPEG to WebP (quality 82); no content alteration.",
+    "width": 1920,
+    "height": 1440,
+    "bytes": 346826,
+    "subject": "Rice terraces by the entrance to Gunung Kawi Tampaksiring.",
+    "projectDocumentation": false,
+    "temporaryReference": true,
+    "accessed": "2026-10-25",
+    "alt": {
+      "id": "Persawahan di akses masuk kawasan Gunung Kawi Tampaksiring.",
+      "en": "Rice terraces by the entrance to Gunung Kawi Tampaksiring."
+    },
+    "visuallyVerified": true
+  }
+]

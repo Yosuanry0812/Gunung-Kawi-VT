@@ -1,0 +1,40 @@
+[
+  {
+    "url": "https://pura-pengukur-ukuran.vercel.app/",
+    "status": 200,
+    "title": "Pura Heritage Site",
+    "headings": [
+      "Pura Dang Khayangan",
+      "Selamat Datang di Warisan Suci Pura Dhangkayangan Cagar Budaya Pengukur-Ukuran"
+    ],
+    "links": [
+      {
+        "text": "Beranda",
+        "href": "/"
+      },
+      {
+        "text": "Sejarah",
+        "href": "/history"
+      },
+      {
+        "text": "Lokasi",
+        "href": "/location"
+      },
+      {
+        "text": "Informasi",
+        "href": "/information"
+      },
+      {
+        "text": "Virtual Tour",
+        "href": "/virtual-tour"
+      }
+    ]
+  },
+  {
+    "url": "https://panorama-beta-one.vercel.app/",
+    "status": 200,
+    "title": "Untitled 3",
+    "headings": [],
+    "links": []
+  }
+]

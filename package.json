@@ -1,0 +1,13 @@
+{
+  "name": "gunung-kawi-project",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Command launcher for the Gunung Kawi website project.",
+  "scripts": {
+    "ai:check": "node .hooks/ai-context.mjs check",
+    "ai:finish": "node .hooks/ai-context.mjs finish",
+    "ai:test": "node --test .hooks/ai-context.test.mjs",
+    "dev": "npm --prefix 01-gunung-kawi-web run dev --",
+    "install:web": "npm --prefix 01-gunung-kawi-web ci"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "description": "Konteks ringkas dan pemeriksaan state/graph khusus Gunung Kawi VT.",
+  "hooks": {
+    "SessionStart": [{ "hooks": [{
+      "type": "command",
+      "command": "node \"C:/Users/yosuanry simbolon/Sistem/joki/Gunung Kawi VT/.hooks/ai-context.mjs\"",
+      "timeout": 10
+    }] }],
+    "Stop": [{ "hooks": [{
+      "type": "command",
+      "command": "node \"C:/Users/yosuanry simbolon/Sistem/joki/Gunung Kawi VT/.hooks/ai-context.mjs\"",
+      "timeout": 10
+    }] }]
+  }
+}
