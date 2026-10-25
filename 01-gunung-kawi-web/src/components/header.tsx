@@ -1,12 +1,19 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight, Landmark, Menu, X } from "lucide-react";
 import { dictionary } from "@/i18n";
 import { href, pageKeys, resolvePage, type Locale } from "@/i18n/routing";
 
+const subscribeToHydration = () => () => undefined;
+
 export function Header({ locale }: { locale: Locale }) {
+  const hydrated = useSyncExternalStore(
+    subscribeToHydration,
+    () => true,
+    () => false,
+  );
   const d = dictionary(locale);
   const pathname = usePathname();
   const current = resolvePage(locale, pathname.split("/")[2] ?? "") ?? "home";
@@ -125,6 +132,7 @@ export function Header({ locale }: { locale: Locale }) {
         <button
           ref={toggleRef}
           className="menu-toggle"
+          disabled={!hydrated}
           aria-label={open ? d.common.close : d.common.menu}
           aria-expanded={open}
           aria-controls="mobile-menu"

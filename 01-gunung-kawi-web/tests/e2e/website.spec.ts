@@ -16,6 +16,59 @@ test("root redirects to Indonesian", async ({ page }) => {
   await page.goto("/");
   await expect(page).toHaveURL(/\/id$/);
 });
+test("header server markup matches hydration on virtual tour pages", async ({
+  browser,
+  page,
+  baseURL,
+}) => {
+  test.setTimeout(60000);
+  const hydrationErrors: string[] = [];
+  page.on("pageerror", (error) => hydrationErrors.push(error.message));
+  page.on("console", (message) => {
+    if (
+      message.type() === "error" &&
+      /hydrat|server rendered|didn't match/i.test(message.text())
+    ) {
+      hydrationErrors.push(message.text());
+    }
+  });
+  const serverContext = await browser.newContext({
+    baseURL,
+    javaScriptEnabled: false,
+  });
+  const serverPage = await serverContext.newPage();
+  try {
+    for (const width of [1440, 390]) {
+      await page.setViewportSize({ width, height: 900 });
+      await serverPage.setViewportSize({ width, height: 900 });
+      for (const route of ["/id/virtual-tour", "/en/virtual-tour"]) {
+        await serverPage.goto(route);
+        const serverBrand = await serverPage.locator(".brand").innerHTML();
+        if (width === 390) {
+          await expect(serverPage.locator(".menu-toggle")).toBeDisabled();
+        }
+        await page.goto(route, { waitUntil: "networkidle" });
+        await expect(page.locator(".brand")).toHaveJSProperty(
+          "innerHTML",
+          serverBrand,
+        );
+        await expect(page.locator(".brand-symbol svg")).toHaveCount(1);
+        await expect(page.locator(".brand-symbol")).toHaveText("");
+        if (width === 390) {
+          const menu = page.locator(".menu-toggle");
+          await expect(menu).toBeEnabled();
+          await menu.click();
+          await expect(menu).toHaveAttribute("aria-expanded", "true");
+          await page.keyboard.press("Escape");
+          await expect(menu).toHaveAttribute("aria-expanded", "false");
+        }
+      }
+    }
+    expect(hydrationErrors).toEqual([]);
+  } finally {
+    await serverContext.close();
+  }
+});
 test("all routes, metadata, assets and local links work", async ({
   page,
   request,

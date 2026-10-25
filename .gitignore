@@ -7,7 +7,6 @@
 **/playwright-report/
 **/test-results/
 **/.DS_Store
-.ai-cache/
 02-gunung-kawi-3dvista/raw-panorama/*
 02-gunung-kawi-3dvista/processed-panorama/*
 02-gunung-kawi-3dvista/audio-guide/*
@@ -15,4 +14,21 @@
 02-gunung-kawi-3dvista/web-export/*
 02-gunung-kawi-3dvista/backup/*
 !**/.gitkeep
+
+# AI & LLM tooling, hooks, configs, cache & rules
+CLAUDE.md
+claude.md
+.claude/
+.codex/
+.hooks/
+.gemini/
+GEMINI.md
+.cursor/
+.cursorrules
+.agent/
+.agents/
+AGENTS.md
+**/AGENTS.md
+.ai-cache/
 graphify-out/
+.graphifyignore
