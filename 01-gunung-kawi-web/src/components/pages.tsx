@@ -1,7 +1,4 @@
-import Link from "next/link";
 import {
-  ArrowRight,
-  ArrowUpRight,
   Compass,
   Layers3,
   MapPin,
@@ -14,15 +11,14 @@ import {
   HeartHandshake,
 } from "lucide-react";
 import { dictionary } from "@/i18n";
-import { href, type Locale, type PageKey } from "@/i18n/routing";
+import { type Locale, type PageKey } from "@/i18n/routing";
 import { historySections } from "@/content/history";
 import { scenes } from "@/content/locations";
-import { sources } from "@/content/sources";
 import { tourFeatures } from "@/content/visitor-information";
 import { MediaPanel, SiteBackdrop } from "./media-panel";
 import { MapPanel } from "./map-panel";
 import { PhotoCredits } from "./photo-credits";
-import { Closing, Eyebrow, PageLink } from "./shared";
+import { Eyebrow, PageLink } from "./shared";
 import { Reveal } from "./reveal";
 import { VirtualTourLaunchButton } from "./virtual-tour-launch-button";
 
@@ -39,19 +35,6 @@ export function HomePage({ locale }: { locale: Locale }) {
               {d.home.title} <span>{d.home.titleAccent}</span>
             </h1>
             <p className="hero-description">{d.home.description}</p>
-            <div className="button-group">
-              <PageLink locale={locale} page="history" variant="gold">
-                {d.common.history}
-              </PageLink>
-              <PageLink locale={locale} page="tour" variant="light">
-                {d.nav.tour} 360°
-              </PageLink>
-            </div>
-            <Link href={href(locale, "location")} className="hero-location">
-              <MapPin size={16} aria-hidden="true" />
-              Tampaksiring, Gianyar, Bali
-              <ArrowRight size={15} aria-hidden="true" />
-            </Link>
           </Reveal>
           <Reveal className="hero-art" delay={0.12}>
             <MediaPanel
@@ -125,29 +108,7 @@ export function HistoryPage({ locale }: { locale: Locale }) {
             </Reveal>
           </div>
         ))}
-        <Reveal className="glass-panel conservation-panel">
-          <Leaf size={30} strokeWidth={1.5} aria-hidden="true" />
-          <div>
-            <h2>{d.historyPage.conservationTitle}</h2>
-            <p>{d.historyPage.conservationText}</p>
-          </div>
-        </Reveal>
-        <section className="glass-panel sources">
-          <h2>{d.common.source}</h2>
-          <p className="source-note">{d.historyPage.sourceNote}</p>
-          <ul>
-            {sources.map((source) => (
-              <li key={source.url}>
-                <a href={source.url} target="_blank" rel="noopener noreferrer">
-                  {source.title}
-                  <ArrowUpRight size={16} aria-hidden="true" />
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
       </section>
-      <Closing locale={locale} />
     </>
   );
 }
@@ -195,7 +156,6 @@ export function LocationPage({ locale }: { locale: Locale }) {
           </Reveal>
         </div>
       </section>
-      <Closing locale={locale} />
     </>
   );
 }
@@ -284,7 +244,6 @@ export function InformationPage({ locale }: { locale: Locale }) {
         </section>
         <PhotoCredits locale={locale} />
       </section>
-      <Closing locale={locale} />
     </>
   );
 }

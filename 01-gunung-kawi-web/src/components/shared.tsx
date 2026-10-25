@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Landmark } from "lucide-react";
 import { dictionary } from "@/i18n";
 import { href, pageKeys, type Locale, type PageKey } from "@/i18n/routing";
-import { Reveal } from "./reveal";
 
 export function PageLink({
   locale,
@@ -28,26 +27,8 @@ export function PageLink({
 export function Eyebrow({ children }: { children: React.ReactNode }) {
   return <p className="eyebrow">{children}</p>;
 }
-export function Closing({ locale }: { locale: Locale }) {
-  const d = dictionary(locale);
-  return (
-    <section className="container closing">
-      <Reveal className="glass-panel closing-panel">
-        <div>
-          <h2>{d.home.closingTitle}</h2>
-          <p>{d.home.closingDescription}</p>
-        </div>
-        <div className="button-group">
-          <PageLink locale={locale} page="history" variant="light">
-            {d.common.readHistory}
-          </PageLink>
-          <PageLink locale={locale} page="tour" variant="gold">
-            {d.nav.tour} 360°
-          </PageLink>
-        </div>
-      </Reveal>
-    </section>
-  );
+export function Closing() {
+  return null;
 }
 export function Footer({ locale }: { locale: Locale }) {
   const d = dictionary(locale);

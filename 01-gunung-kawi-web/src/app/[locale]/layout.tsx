@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { notFound } from "next/navigation";
 import { Header } from "@/components/header";
-import { Footer } from "@/components/shared";
 import { dictionary } from "@/i18n";
 import { isLocale, locales } from "@/i18n/routing";
 import { getSiteOrigin } from "@/lib/config";
@@ -41,7 +40,6 @@ export default async function LocaleLayout({
         <main id="main-content" tabIndex={-1}>
           {children}
         </main>
-        <Footer locale={locale} />
       </body>
     </html>
   );
