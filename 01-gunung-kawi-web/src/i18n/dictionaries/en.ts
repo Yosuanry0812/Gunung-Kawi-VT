@@ -125,7 +125,15 @@ export const en: Dictionary = {
       "Banjar Penaka, Tampaksiring village and district, Gianyar Regency, Bali.",
     mapLink: "Open Google Maps",
     loadMap: "Show interactive map",
-    mapPrivacy: "The Google map loads only when you choose to display it.",
+    mapPrivacy:
+      "The Google map loads automatically as this section approaches the screen.",
+    directions: "Get directions",
+    copyAddress: "Copy address",
+    copied: "Address copied",
+    copyFailed: "Unable to copy. Select the address above to copy it manually.",
+    mapUnavailable:
+      "The map could not load. Open Google Maps directly or try again.",
+    retryMap: "Try again",
     mapLoading:
       "Loading map… If the map does not appear, use the Google Maps link below.",
     accessTitle: "Know the route ahead",

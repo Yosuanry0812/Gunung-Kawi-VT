@@ -122,8 +122,15 @@ export const id = {
       "Banjar Penaka, Desa Tampaksiring, Kecamatan Tampaksiring, Kabupaten Gianyar, Bali.",
     mapLink: "Buka Google Maps",
     loadMap: "Tampilkan peta interaktif",
-    mapPrivacy:
-      "Peta dimuat dari Google hanya setelah Anda memilih menampilkannya.",
+    mapPrivacy: "Peta Google dimuat otomatis saat bagian ini mendekati layar.",
+    directions: "Petunjuk arah",
+    copyAddress: "Salin alamat",
+    copied: "Alamat disalin",
+    copyFailed:
+      "Alamat belum dapat disalin. Pilih alamat di atas untuk menyalinnya secara manual.",
+    mapUnavailable:
+      "Peta belum dapat dimuat. Buka langsung di Google Maps atau coba lagi.",
+    retryMap: "Coba lagi",
     mapLoading:
       "Memuat peta… Jika peta tidak muncul, buka Google Maps melalui tautan di bawah.",
     accessTitle: "Kenali perjalanan Anda",

@@ -38,6 +38,20 @@ npm run dev
 
 Buka `http://localhost:3000`; root mengalihkan ke `/id`. `.env.local` bersifat opsional untuk mencoba website dengan status tur belum tersedia; salin `.env.example` hanya pada setup pertama jika ingin mengisi konfigurasi.
 
+## Deployment Vercel
+
+Repository: `Yosuanry0812/Gunung-Kawi-VT`, branch produksi `main`.
+Project Vercel: `gunung-kawi-vt` pada team `yosuanry-simbolons-projects`.
+
+- Framework: Next.js; Node.js `24.x`.
+- Root Directory: `01-gunung-kawi-web`.
+- Install Command: `npm ci`; Build Command: `npm run build`.
+- `NEXT_PUBLIC_SITE_URL`: origin publik deployment, dipakai canonical, sitemap, dan robots.
+- `NEXT_PUBLIC_VIRTUAL_TOUR_URL`: kosong sampai ekspor 3DVista Gunung Kawi asli tersedia.
+- Push berikutnya ke `main` diterbitkan melalui integrasi GitHub Vercel.
+
+Peta memakai Place ID Google Maps Gunung Kawi Tampaksiring yang diverifikasi pada `2026-10-28`, dimuat saat mendekati layar. Galeri mendukung tombol sebelumnya/berikutnya, perbesar foto, tombol panah keyboard, serta Escape. Foto sementara dari Wikimedia Commons memiliki kredit pada galeri dan halaman Informasi; tidak diklaim sebagai panorama 360°.
+
 ## Masukkan berkas Anda
 
 1. Simpan proposal asli ke `03-dokumen/proposal/`.

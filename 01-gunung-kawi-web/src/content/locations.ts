@@ -1,9 +1,14 @@
+// Verified against the Gunung Kawi Tampaksiring listing on Google Maps, 2026-10-28.
+const placeId = "ChIJDYFDg0kZ0i0ReamnFXB97-E";
+const query = "Gunung Kawi Tampaksiring, Gianyar, Bali";
 export const locationConfig = {
-  query: "Gunung Kawi Tampaksiring Banjar Penaka Gianyar Bali",
-  mapUrl:
-    "https://www.google.com/maps/search/?api=1&query=Gunung%20Kawi%20Tampaksiring%20Banjar%20Penaka%20Gianyar%20Bali",
+  query,
+  placeId,
+  coordinates: { latitude: -8.4235384, longitude: 115.3105687 },
+  mapUrl: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}&query_place_id=${placeId}`,
+  directionsUrl: `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(query)}&destination_place_id=${placeId}`,
   embedUrl:
-    "https://maps.google.com/maps?q=Gunung%20Kawi%20Tampaksiring%20Banjar%20Penaka%20Gianyar%20Bali&output=embed",
+    "https://www.google.com/maps?cid=16280369098320750969&z=17&output=embed",
 };
 export const sceneNames = [
   ["P01", "Gerbang Masuk", "Entrance Gate", "access"],

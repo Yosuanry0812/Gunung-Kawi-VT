@@ -182,7 +182,9 @@ test("mobile keyboard menu traps focus, closes on Escape and navigation", async 
   expect(await page.locator("body").evaluate((b) => b.style.overflow)).toBe("");
 });
 test("responsive pages have no horizontal overflow", async ({ page }) => {
-  for (const width of [360, 390, 768, 1024, 1440, 1920]) {
+  for (const width of [
+    320, 360, 390, 430, 600, 768, 1024, 1100, 1440, 1920, 2560,
+  ]) {
     await page.setViewportSize({ width, height: 900 });
     for (const route of routes) {
       await page.goto(route);
@@ -210,20 +212,106 @@ test("reduced motion and keyboard skip link work", async ({ page }) => {
     ),
   ).toBe("auto");
 });
-test("map requires consent and always provides a fallback link", async ({
+test("map loads near the viewport and targets the verified Google place", async ({
   page,
 }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.route("https://www.google.com/maps?**", (route) =>
+    route.fulfill({
+      status: 200,
+      contentType: "text/html",
+      body: "<h1>Map fixture</h1>",
+    }),
+  );
   await page.goto("/en/location");
   await expect(page.locator("iframe")).toHaveCount(0);
+  await page.locator(".map-block").scrollIntoViewIfNeeded();
+  await expect(page.locator("iframe")).toHaveAttribute(
+    "src",
+    /cid=16280369098320750969/,
+  );
   await expect(
-    page.getByRole("link", { name: "Open Google Maps" }),
-  ).toHaveAttribute("href", /maps\/search/);
-  await page.route("**/maps.google.com/**", (route) => route.abort());
-  await page.getByRole("button", { name: "Show interactive map" }).click();
-  await expect(page.locator("iframe")).toHaveCount(1);
+    page.getByRole("link", { name: "Open Google Maps", exact: true }),
+  ).toHaveAttribute("href", /query_place_id=ChIJDYFDg0kZ0i0ReamnFXB97-E/);
   await expect(
-    page.getByRole("link", { name: "Open Google Maps" }),
+    page.getByRole("link", { name: "Get directions" }),
+  ).toHaveAttribute("href", /destination_place_id=ChIJDYFDg0kZ0i0ReamnFXB97-E/);
+});
+test("blocked map keeps directions and can retry", async ({ page }) => {
+  await page.route("https://www.google.com/maps?**", () => {});
+  await page.goto("/en/location");
+  await page.locator(".map-block").scrollIntoViewIfNeeded();
+  await expect(page.locator(".map-fallback")).toBeVisible({ timeout: 16000 });
+  await expect(
+    page.getByRole("link", { name: "Get directions" }),
   ).toBeVisible();
+  await page.getByRole("button", { name: "Try again" }).click();
+  await expect(page.locator(".map-fallback")).toHaveCount(0);
+});
+test("address copy works and reports a clipboard failure", async ({
+  browser,
+  baseURL,
+}) => {
+  const context = await browser.newContext({
+    baseURL,
+    permissions: ["clipboard-read", "clipboard-write"],
+  });
+  const page = await context.newPage();
+  try {
+    await page.goto("/en/location");
+    await page.getByRole("button", { name: "Copy address" }).click();
+    await expect(
+      page.getByRole("button", { name: "Address copied" }),
+    ).toBeVisible();
+    expect(await page.evaluate(() => navigator.clipboard.readText())).toContain(
+      "Gunung Kawi Tampaksiring",
+    );
+    await page.evaluate(() => {
+      Object.defineProperty(navigator.clipboard, "writeText", {
+        value: () => Promise.reject(new Error("Clipboard denied")),
+      });
+    });
+    await page.getByRole("button", { name: "Address copied" }).click();
+    await expect(page.locator(".copy-feedback")).toContainText(
+      "Unable to copy",
+    );
+  } finally {
+    await context.close();
+  }
+});
+test("photo gallery navigation and accessible full-screen dialog work", async ({
+  page,
+}) => {
+  for (const locale of ["id", "en"]) {
+    await page.goto(`/${locale}`);
+    const image = page.locator(".gallery-photo img");
+    const before = await image.getAttribute("src");
+    await page
+      .getByRole("button", {
+        name: locale === "id" ? "Foto berikutnya" : "Next photo",
+        exact: true,
+      })
+      .click();
+    await expect(image).not.toHaveAttribute("src", before!);
+    await page
+      .getByRole("button", {
+        name: locale === "id" ? "Perbesar foto" : "Enlarge photo",
+      })
+      .click();
+    await expect(page.getByRole("dialog")).toBeVisible();
+    await expect(page.locator(".dialog-image img")).toBeVisible();
+    await page.keyboard.press("ArrowLeft");
+    await page.keyboard.press("Escape");
+    await expect(page.getByRole("dialog")).not.toBeVisible();
+    expect(
+      await page.locator("body").evaluate((body) => body.style.overflow),
+    ).toBe("");
+    await expect(
+      page.getByRole("button", {
+        name: locale === "id" ? "Perbesar foto" : "Enlarge photo",
+      }),
+    ).toBeFocused();
+  }
 });
 test("WCAG AA checks for every page", async ({ page }) => {
   for (const route of routes) {

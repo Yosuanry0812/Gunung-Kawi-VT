@@ -8,7 +8,7 @@ import {
   resolvePage,
   slugs,
 } from "../src/i18n/routing";
-import { scenes } from "../src/content/locations";
+import { scenes, locationConfig } from "../src/content/locations";
 test("empty and unsafe tour URLs never create a launch destination", () => {
   for (const value of [
     undefined,
@@ -60,4 +60,25 @@ test("all nine scenes remain planned and have permission metadata", () => {
         s.assetStatus === "planned" && s.permissionNotes && s.narrationPlan,
     ),
   );
+});
+
+test("Google map and directions consistently target Tampaksiring's verified place", () => {
+  const search = new URL(locationConfig.mapUrl);
+  const directions = new URL(locationConfig.directionsUrl);
+  const embed = new URL(locationConfig.embedUrl);
+  assert.equal(
+    search.searchParams.get("query_place_id"),
+    locationConfig.placeId,
+  );
+  assert.equal(
+    directions.searchParams.get("destination_place_id"),
+    locationConfig.placeId,
+  );
+  assert.equal(
+    embed.searchParams.get("cid"),
+    BigInt("0xe1ef7d7015a7a979").toString(),
+  );
+  assert.equal(embed.searchParams.get("output"), "embed");
+  assert.equal(search.hostname, "www.google.com");
+  assert.match(search.searchParams.get("query")!, /Tampaksiring/);
 });

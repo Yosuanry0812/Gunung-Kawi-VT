@@ -27,8 +27,8 @@ export function MediaPanel({
           src={item.src}
           alt={photograph?.alt[locale] ?? caption ?? d.common.photoAlt}
           fill
-          sizes="(max-width: 700px) 100vw, (max-width: 1100px) 60vw, 50vw"
-          priority={priority}
+          sizes="(max-width: 800px) calc(100vw - 40px), (max-width: 1100px) 55vw, 620px"
+          preload={priority}
         />
       ) : (
         <div className="media-placeholder">
@@ -62,7 +62,14 @@ export function SiteBackdrop({ name = "hero" }: { name?: MediaKey }) {
   return (
     <div className="site-backdrop" aria-hidden="true">
       {item.src && (
-        <Image src={item.src} alt="" fill sizes="100vw" priority quality={75} />
+        <Image
+          src={item.src.replace(".webp", "-backdrop.webp")}
+          alt=""
+          fill
+          sizes="100vw"
+          preload
+          quality={75}
+        />
       )}
       <div className="backdrop-shade" />
     </div>

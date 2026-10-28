@@ -17,6 +17,7 @@ import { scenes } from "@/content/locations";
 import { tourFeatures } from "@/content/visitor-information";
 import { MediaPanel, SiteBackdrop } from "./media-panel";
 import { MapPanel } from "./map-panel";
+import { PhotoGallery } from "./photo-gallery";
 import { PhotoCredits } from "./photo-credits";
 import { Eyebrow, PageLink } from "./shared";
 import { Reveal } from "./reveal";
@@ -37,12 +38,7 @@ export function HomePage({ locale }: { locale: Locale }) {
             <p className="hero-description">{d.home.description}</p>
           </Reveal>
           <Reveal className="hero-art" delay={0.12}>
-            <MediaPanel
-              name="hero"
-              locale={locale}
-              caption={d.home.heroCaption}
-              priority
-            />
+            <PhotoGallery locale={locale} priority />
           </Reveal>
         </div>
       </section>
@@ -63,6 +59,7 @@ function PageHero({
     <section className="page-hero">
       <div className="container">
         <Reveal>
+          <Eyebrow>{content.eyebrow}</Eyebrow>
           <h1>
             {content.title} <span>{content.accent}</span>
           </h1>
@@ -293,11 +290,7 @@ export function TourPage({ locale }: { locale: Locale }) {
             <p>{d.home.tourDescription}</p>
           </Reveal>
           <Reveal className="glass-panel tour-launch-card" delay={0.1}>
-            <MediaPanel
-              name="introduction"
-              locale={locale}
-              caption={d.tourPage.previewLabel}
-            />
+            <PhotoGallery locale={locale} />
             <div className="tour-launch">
               <VirtualTourLaunchButton locale={locale} />
               <PageLink locale={locale} page="home" variant="text">
