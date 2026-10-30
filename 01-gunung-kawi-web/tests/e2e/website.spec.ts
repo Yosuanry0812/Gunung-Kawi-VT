@@ -197,6 +197,126 @@ test("responsive pages have no horizontal overflow", async ({ page }) => {
     }
   }
 });
+test("mobile menu fills the available screen and scrolls to every control", async ({
+  page,
+}) => {
+  for (const viewport of [
+    { width: 320, height: 568 },
+    { width: 393, height: 852 },
+    { width: 844, height: 390 },
+    { width: 820, height: 1180 },
+    { width: 1099, height: 600 },
+  ]) {
+    await page.setViewportSize(viewport);
+    for (const locale of ["id", "en"]) {
+      await page.goto(`/${locale}`);
+      await page.locator(".menu-toggle").click();
+      const menu = page.locator("#mobile-menu");
+      await expect(menu).toBeVisible();
+      await expect(menu).toHaveCSS("transform", "none");
+      const bounds = await menu.boundingBox();
+      const bar = await page.locator(".header-inner").boundingBox();
+      expect(bounds!.y).toBeCloseTo(bar!.y + bar!.height, 0);
+      expect(bounds!.height).toBeGreaterThan(viewport.height - bar!.height - 2);
+      expect(bounds!.y + bounds!.height).toBeCloseTo(viewport.height, 0);
+      expect(bounds!.width).toBe(viewport.width);
+      expect(
+        await page.evaluate(() => document.documentElement.scrollWidth),
+      ).toBe(viewport.width);
+      if (viewport.width === 393 && locale === "en") {
+        const results = await new AxeBuilder({ page })
+          .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa"])
+          .analyze();
+        expect(results.violations).toEqual([]);
+      }
+
+      // Wheel scrolling must stay inside the menu on short landscape screens.
+      if (viewport.height === 390) {
+        await menu.hover();
+        await page.mouse.wheel(0, 600);
+        await expect
+          .poll(() => menu.evaluate((node) => node.scrollTop))
+          .toBeGreaterThan(0);
+        expect(await page.evaluate(() => window.scrollY)).toBe(0);
+      }
+      const language = menu.getByRole("link", { name: "EN", exact: true });
+      await language.scrollIntoViewIfNeeded();
+      await expect(language).toBeInViewport({ ratio: 1 });
+      await expect(page.locator(".menu-toggle")).toBeInViewport({ ratio: 1 });
+      await language.click();
+      await expect(page).toHaveURL("/en");
+      await expect(menu).toHaveCount(0);
+    }
+  }
+});
+test("touch menu preserves page scroll and adapts to rotation and desktop", async ({
+  browser,
+  baseURL,
+}) => {
+  const context = await browser.newContext({
+    baseURL,
+    viewport: { width: 393, height: 852 },
+    isMobile: true,
+    hasTouch: true,
+  });
+  const page = await context.newPage();
+  try {
+    await page.goto("/id/sejarah");
+    await page.evaluate(() =>
+      window.scrollTo({ top: 500, behavior: "instant" }),
+    );
+    const scrollBefore = await page.evaluate(() => window.scrollY);
+    expect(scrollBefore).toBeGreaterThan(0);
+    const button = page.locator(".menu-toggle");
+    await button.tap();
+    await expect(page.locator("main")).toHaveJSProperty("inert", true);
+    await page.setViewportSize({ width: 852, height: 393 });
+    const menu = page.locator("#mobile-menu");
+    await expect
+      .poll(async () => {
+        const bounds = await menu.boundingBox();
+        return Math.round(bounds!.y + bounds!.height);
+      })
+      .toBe(393);
+    const session = await context.newCDPSession(page);
+    await session.send("Input.dispatchTouchEvent", {
+      type: "touchStart",
+      touchPoints: [{ x: 400, y: 310 }],
+    });
+    for (const y of [270, 220, 170, 120]) {
+      await session.send("Input.dispatchTouchEvent", {
+        type: "touchMove",
+        touchPoints: [{ x: 400, y }],
+      });
+    }
+    await session.send("Input.dispatchTouchEvent", {
+      type: "touchEnd",
+      touchPoints: [],
+    });
+    await expect
+      .poll(() => menu.evaluate((node) => node.scrollTop))
+      .toBeGreaterThan(0);
+    expect(await page.evaluate(() => window.scrollY)).toBe(0);
+    await button.tap();
+    await expect(menu).toHaveCount(0);
+    expect(await page.evaluate(() => window.scrollY)).toBe(scrollBefore);
+    await expect(page.locator("main")).toHaveJSProperty("inert", false);
+    await page.setViewportSize({ width: 393, height: 852 });
+    await button.tap();
+    await page.setViewportSize({ width: 1440, height: 900 });
+    await expect(menu).toHaveCount(0);
+    await expect(page.locator(".desktop-nav")).toBeVisible();
+    expect(
+      await page.locator("body").evaluate((body) => body.style.position),
+    ).toBe("");
+    await page.mouse.wheel(0, 250);
+    await expect
+      .poll(() => page.evaluate(() => window.scrollY))
+      .toBeGreaterThan(scrollBefore);
+  } finally {
+    await context.close();
+  }
+});
 test("reduced motion and keyboard skip link work", async ({ page }) => {
   await page.emulateMedia({ reducedMotion: "reduce" });
   await page.goto("/en");

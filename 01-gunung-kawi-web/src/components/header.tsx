@@ -29,13 +29,35 @@ export function Header({ locale }: { locale: Locale }) {
   }, []);
   useEffect(() => {
     if (!open) return;
-    const before = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    const background = document.querySelectorAll<HTMLElement>("main, footer");
-    background.forEach((element) => {
+    const { scrollX, scrollY } = window;
+    const scrollbarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
+    const bodyStyle = document.body.style;
+    const before = {
+      overflow: bodyStyle.overflow,
+      position: bodyStyle.position,
+      top: bodyStyle.top,
+      left: bodyStyle.left,
+      right: bodyStyle.right,
+    };
+    // Fix the background in place while the menu scrolls, including on touch devices.
+    Object.assign(bodyStyle, {
+      overflow: "hidden",
+      position: "fixed",
+      top: `-${scrollY}px`,
+      left: "0",
+      right: `${scrollbarWidth}px`,
+    });
+    const background = Array.from(
+      document.querySelectorAll<HTMLElement>("main, footer"),
+      (element) => ({ element, inert: element.inert }),
+    );
+    background.forEach(({ element }) => {
       element.inert = true;
     });
-    menuRef.current?.querySelector<HTMLAnchorElement>("a")?.focus();
+    menuRef.current
+      ?.querySelector<HTMLAnchorElement>("a")
+      ?.focus({ preventScroll: true });
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setOpen(false);
@@ -67,9 +89,10 @@ export function Header({ locale }: { locale: Locale }) {
     media.addEventListener("change", onResize);
     document.addEventListener("keydown", onKey);
     return () => {
-      document.body.style.overflow = before;
-      background.forEach((element) => {
-        element.inert = false;
+      Object.assign(bodyStyle, before);
+      window.scrollTo({ left: scrollX, top: scrollY, behavior: "instant" });
+      background.forEach(({ element, inert }) => {
+        element.inert = inert;
       });
       document.removeEventListener("keydown", onKey);
       media.removeEventListener("change", onResize);

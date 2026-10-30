@@ -1181,6 +1181,16 @@ main {
   }
 }
 @media (max-width: 1099px) {
+  .site-header.menu-open {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    height: 100dvh;
+    padding-top: env(safe-area-inset-top);
+  }
+  .header-inner.container {
+    flex-shrink: 0;
+  }
   .desktop-nav,
   .header-actions {
     display: none;
@@ -1190,11 +1200,17 @@ main {
   }
   .mobile-menu {
     display: block;
-    position: fixed;
-    inset: 80px 0 0;
-    padding: 24px 32px 45px;
+    flex: 1;
+    min-height: 0;
+    padding: 20px max(24px, env(safe-area-inset-right))
+      calc(32px + env(safe-area-inset-bottom))
+      max(24px, env(safe-area-inset-left));
     background: rgb(17 26 20 / 98%);
     overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scrollbar-width: thin;
+    scrollbar-color: #d8b54866 transparent;
+    scroll-padding-block: 20px;
     animation: menu-enter 0.2s ease-out;
   }
   .mobile-menu nav {
@@ -1205,9 +1221,10 @@ main {
     display: flex;
     align-items: center;
     gap: 18px;
-    min-height: 66px;
+    min-height: clamp(56px, 8dvh, 66px);
+    padding-block: 12px;
     border-bottom: 1px solid rgb(255 255 255 / 20%);
-    font-size: 22px;
+    font-size: clamp(18px, 3vw, 22px);
   }
   .mobile-menu nav a > span {
     color: #ebd39c;
@@ -2049,6 +2066,9 @@ main {
   .header-actions .header-cta {
     display: none;
   }
+  .menu-open .header-actions {
+    display: none;
+  }
 }
 @media (max-width: 800px) {
   .hero-layout,
@@ -2109,10 +2129,6 @@ main {
   }
   .menu-toggle {
     flex: 0 0 44px;
-  }
-  .mobile-menu {
-    inset-block-start: 72px;
-    padding-bottom: max(32px, env(safe-area-inset-bottom));
   }
   .home-hero {
     padding-top: 112px;
